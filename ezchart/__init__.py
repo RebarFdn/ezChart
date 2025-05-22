@@ -22,7 +22,6 @@ class ezChart:
         if options:
             self.options = options
 
-
     def chart(self):
         """Returns a html chart from the given data"""
         chart_str:str =""
@@ -37,11 +36,9 @@ class ezChart:
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>ezChart </title>                                
-                   
+                    <title>ezChart </title>
                     <style>{require(CHART_CSS)}</style>
                     <script>{require(CHART_JS)}</script>
-                     
                 </head>
                 <body> 
                 <input id="chart_token" type="text" name="chart_token" value="{token_urlsafe(32)}" hidden></input>
@@ -54,16 +51,11 @@ class ezChart:
     def chart_data(self, options:dict={}):
         if self.options:
             options = self.options
-        
-        
-        
         data = f"""<script>
             const False = false
             const True = true
             var chart = new ApexCharts(document.querySelector("#chart"), {options});
-
-            chart.render();
-        
+            chart.render();        
         </script>"""
         return data
     
