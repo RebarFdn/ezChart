@@ -172,5 +172,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-ezChart.code-workspace
-uv.lock
+.code-workspace
+.lock
